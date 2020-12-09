@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <script>
+       //========================================================
+       var M
+       var classificacao
+       var nome = prompt('Digite seu nome')
+       var digitealtura = prompt('Digite sua altura em centimetros')
+       var digitepeso = prompt('Digite seu peso em Kg')
+
+       altura = parseFloat(digitealtura)
+       peso = parseFloat(digitepeso)
+
+       altura = altura/100
+       M = peso/(altura * altura)
+
+       M = parseFloat(M).toFixed(2)
+
+       if(M < 16){
+        classificacao = 'Baixo peso muito grave.'
+        document.write(nome + ' possui indice de massa corporal igual a ' + M + ', sendo classificado como '+ classificacao +'<br/>' );   
+       }
+       else if(M  >= 16 && M <= 16.99){
+        classificacao = 'Baixo peso grave.'
+        document.write(nome + ' possui indice de massa corporal igual a ' + M + ', sendo classificado como '+ classificacao +'<br/>' );
+       }
+       else if(M  >=  17 && M <=18.49){
+        classificacao = 'Baixo peso.'
+        document.write(nome + ' possui indice de massa corporal igual a ' + M + ', sendo classificado como '+ classificacao +'<br/>' );
+       }
+       else if(M  >=  18.50 && M <= 24.99){
+        classificacao = 'Peso normal.'
+        document.write(nome + ' possui indice de massa corporal igual a ' + M + ', sendo classificado como '+ classificacao +'<br/>' );
+       }
+       else if(M  >=  25 && M <= 29.99){
+        classificacao = 'Sobrepeso.'
+        document.write(nome + ' possui indice de massa corporal igual a ' + M + ', sendo classificado como '+ classificacao +'<br/>' ); 
+       }
+       else if(M >= 30 && M <= 34.99){
+        classificacao = 'Obesidade grau I.'
+        document.write(nome + ' possui indice de massa corporal igual a ' + M + ', sendo classificado como '+ classificacao +'<br/>' );
+       }
+       else if(M  >=  35 && M <= 39.99){
+        classificacao = 'Obesidade grau II.'
+        document.write(nome + ' possui indice de massa corporal igual a ' + M + ', sendo classificado como '+ classificacao +'<br/>' );
+       }
+       else{
+        classificacao = 'Obesidade grau III.'
+        document.write(nome + ' possui indice de massa corporal igual a ' + M + ', sendo classificado como '+ classificacao +'<br/>' );
+       }
+
+
+
+    </script>
+</head>
